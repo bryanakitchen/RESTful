@@ -23,13 +23,8 @@ const Request = () => {
           <label htmlFor="delete">DELETE</label>
           <button>Send</button>
         </div>
-        <textarea placeholder="Hit Send to get a response"></textarea>
+        <textarea placeholder="Raw JSON Body"></textarea>
       </form>
-
-      <div>
-        Hello from Request
-      
-      </div>
 
       <Response />
     </>
