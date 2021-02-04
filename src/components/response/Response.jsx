@@ -1,9 +1,10 @@
 import React from 'react';
+import ReactJson from 'react-json-view';
 
 const Response = () => {
   return (
     <div>
-      Hello from Response.
+      <ReactJson />
     </div>
   );
 };
