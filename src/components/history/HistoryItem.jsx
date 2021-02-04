@@ -7,7 +7,6 @@ const HistoryItem = ({ method, url, id }) => {
       <h3 id={id}>{method}</h3>
       <p id={id}>{url}</p>
     </article>
-
   );
 };
 
