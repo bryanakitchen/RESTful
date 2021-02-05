@@ -1,25 +1,27 @@
 import React from 'react';
 import Response from '../response/Response';
+import PropTypes from 'prop-types';
 
-const Request = () => {
+const Request = ({ onChange }) => {
   return (
     <>
       <form>
         <input type="text" placeholder="Enter request URL" />
         <div>
-          <input type="radio" name="method" value="get" />
+          <input type="radio" name="method" value="get" onChange={onChange} />
           <label htmlFor="get">GET</label>
 
-          <input type="radio" name="method" value="post" />
+          <input type="radio" name="method" value="post" onChange={onChange} />
           <label htmlFor="post">POST</label>
 
-          <input type="radio" name="method" value="put" />
+          <input type="radio" name="method" value="put" onChange={onChange} />
           <label htmlFor="put">PUT</label>
 
-          <input type="radio" name="method" value="patch" />
+          <input type="radio" name="method" value="patch" onChange={onChange} />
           <label htmlFor="patch">PATCH</label>
 
-          <input type="radio" name="method" value="delete" />
+          <input 
+            type="radio" name="method" value="delete" onChange={onChange} />
           <label htmlFor="delete">DELETE</label>
           <button>Send</button>
         </div>
@@ -29,6 +31,10 @@ const Request = () => {
       <Response />
     </>
   );
+};
+
+Request.propTypes = {
+  onChange: PropTypes.func.isRequired
 };
 
 export default Request;
