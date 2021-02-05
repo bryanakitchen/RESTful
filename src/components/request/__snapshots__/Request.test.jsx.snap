@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Request component renders Request 1`] = `
+<DocumentFragment>
+  <form>
+    <input
+      name="url"
+      placeholder="Enter request URL"
+      type="text"
+      value="www.google.com"
+    />
+    <div>
+      <input
+        checked=""
+        name="method"
+        type="radio"
+        value="get"
+      />
+      <label
+        for="get"
+      >
+        GET
+      </label>
+      <input
+        name="method"
+        type="radio"
+        value="post"
+      />
+      <label
+        for="post"
+      >
+        POST
+      </label>
+      <input
+        name="method"
+        type="radio"
+        value="put"
+      />
+      <label
+        for="put"
+      >
+        PUT
+      </label>
+      <input
+        name="method"
+        type="radio"
+        value="delete"
+      />
+      <label
+        for="delete"
+      >
+        DELETE
+      </label>
+      <button>
+        Send
+      </button>
+    </div>
+    <textarea
+      cols="50"
+      name="body"
+      placeholder="Raw JSON Body"
+      rows="10"
+    >
+      {}
+    </textarea>
+  </form>
+</DocumentFragment>
+`;
