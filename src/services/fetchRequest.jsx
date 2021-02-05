@@ -1,8 +1,7 @@
 export const fetchRequest = (url, method, body) => {
   if(method === 'get'){
     return fetch(url)
-      .then(res => res.json())
-      .then(console.log);
+      .then(res => res.json());
   }
 
   return fetch(url, {
@@ -12,6 +11,5 @@ export const fetchRequest = (url, method, body) => {
     },
     body
   })
-    .then(res => res.json())
-    .then(console.log);
+    .then(res => res.json());
 };
