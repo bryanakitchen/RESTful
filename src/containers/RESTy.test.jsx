@@ -19,7 +19,7 @@ describe('RESTy container', () => {
 
     return waitFor(() => {
       expect(screen.getByTestId('display'))
-      .not.toBeEmptyDOMElement();
+        .not.toBeEmptyDOMElement();
     });
   }
   );

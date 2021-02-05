@@ -14,7 +14,7 @@ const History = ({ history }) => {
   return (
     <>
       <article>
-        <h2>History</h2>
+        { (historyElements < 1) ? <p></p> : <h2>History</h2> }
         <ul>
           {historyElements}
         </ul>
