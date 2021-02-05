@@ -9,36 +9,34 @@ export default class RESTy extends Component {
     method: '',
     url: '',
     body: '',
-    display: { 'Hi there': 'Please submit a request' }
+    display: { 'Hi there': 'Please submit a request' },
+    history: JSON.parse(localStorage.getItem('RESTful History') || '[]') 
   }
 
   handleChange = ({ target }) => {
-    // console.log(target.value)
     this.setState({ [target.name]: target.value });
   }
 
   handleSubmit = (e) => {
     e.preventDefault();
     const { url, method, body } = this.state;
-    // stringify body???
     
     fetchRequest(url, method, body)
-      // .then(this.setState({
-      //   method,
-      //   url,
-      //   body
-      // })
-      // )
       .then(display => 
         this.setState({ display }));
-    // this.setState(display => JSON.stringify(display));
-    // fetchRequest(url, method, body)
-    // .then(state => (this.setState(JSON.stringify({ state })))
-    // );
+
+    this.setState(state => ({ 
+      history: [...state.history, { url, method }]
+    }), 
+    () => localStorage.setItem(
+      'RESTful History', 
+      JSON.stringify(this.state.history)
+    ));
+    
   }
 
   render() {
-    const { url, method, body, display } = this.state;
+    const { url, method, body, display, history } = this.state;
     return (
       <>
         <History history={history} />
