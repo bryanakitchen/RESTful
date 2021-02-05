@@ -17,11 +17,14 @@ export default class RESTy extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
+    const { url, method, body } = this.state;
+    // stringify body???
     
-    fetchRequest(this.state.url, this.state.method)
+    fetchRequest(url, method, body)
       .then(this.setState({
-        method: this.state.method,
-        url: this.state.url
+        method,
+        url,
+        body
       })
       );
 
