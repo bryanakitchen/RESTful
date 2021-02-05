@@ -6,7 +6,7 @@ const Request = ({ onChange }) => {
   return (
     <>
       <form>
-        <input type="text" placeholder="Enter request URL" />
+        <input type="text" placeholder="Enter request URL" name="url" onChange={onChange} />
         <div>
           <input type="radio" name="method" value="get" onChange={onChange} />
           <label htmlFor="get">GET</label>
