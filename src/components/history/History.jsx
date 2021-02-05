@@ -38,7 +38,7 @@ History.propTypes = {
   history: PropTypes.arrayOf(PropTypes.shape({
     method: PropTypes.string.isRequired,
     url: PropTypes.string.isRequired,
-    id: PropTypes.string.isRequired
+    id: PropTypes.number.isRequired
   })).isRequired
 };
 

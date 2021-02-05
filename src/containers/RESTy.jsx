@@ -10,7 +10,7 @@ export default class RESTy extends Component {
   render() {
     return (
       <>
-        <History />
+        <History history={history} />
         <Request />
       </>
     );
