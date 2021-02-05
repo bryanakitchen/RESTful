@@ -2,7 +2,9 @@
 
 exports[`Response component renders Response 1`] = `
 <DocumentFragment>
-  <div>
+  <div
+    data-testid="display"
+  >
     <div
       class="react-json-view"
       style="font-family: monospace; cursor: default; background-color: rgba(0, 0, 0, 0); position: relative;"

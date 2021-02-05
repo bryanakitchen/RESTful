@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 const Response = ({ display }) => {
   return (
-    <div>
+    <div data-testid="display">
       <ReactJson src={display} />
     </div>
   );
