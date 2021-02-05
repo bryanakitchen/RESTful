@@ -3,17 +3,6 @@ import HistoryItem from './HistoryItem';
 import PropTypes from 'prop-types';
 
 const History = ({ history }) => {
-  // const tempHistory = [
-  //   {
-  //     method: 'get',
-  //     url: 'google.com',
-  //   },
-  //   {
-  //     method: 'put',
-  //     url: 'google1.com',
-  //   }
-  // ];
-  
   const historyElements = history.map((item, i) => {
     return (
       <li key={i}>
