@@ -5,7 +5,6 @@ import PropTypes from 'prop-types';
 const Response = ({ display }) => {
   return (
     <div>
-      <h3>Response</h3>
       <ReactJson src={display} />
     </div>
   );
