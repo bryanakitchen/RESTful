@@ -17,7 +17,7 @@ const History = ({ history }) => {
   const historyElements = tempHistory.map((item, i) => {
     return (
       <li key={i}>
-        <HistoryItem method={item.method} url={item.url} />
+        <HistoryItem method={item.method} url={item.url} id={i} />
       </li>
     );
   });
