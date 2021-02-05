@@ -4,14 +4,20 @@ import Request from '../components/request/Request';
 
 export default class RESTy extends Component {
   state = {
-
+    method: '',
+    url: ''
   }
-  
+
+  handleChange = ({ target }) => {
+      console.log(target.value);
+    this.setState({ [target.name]: target.value });
+  }
+
   render() {
     return (
       <>
         <History history={history} />
-        <Request />
+        <Request onChange={this.handleChange} />
       </>
     );
   }
