@@ -41,14 +41,6 @@ const Request = ({ onChange, onSubmit, url, method, body }) => {
           <input 
             type="radio" 
             name="method" 
-            value="patch" 
-            checked={method === 'patch'}
-            onChange={onChange} />
-          <label htmlFor="patch">PATCH</label>
-
-          <input 
-            type="radio" 
-            name="method" 
             value="delete"
             checked={method === 'delete'}
             onChange={onChange} />

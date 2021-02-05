@@ -13,28 +13,16 @@ export default class RESTy extends Component {
   }
 
   handleChange = ({ target }) => {
-    // console.log(target.value)
     this.setState({ [target.name]: target.value });
   }
 
   handleSubmit = (e) => {
     e.preventDefault();
     const { url, method, body } = this.state;
-    // stringify body???
     
     fetchRequest(url, method, body)
-      // .then(this.setState({
-      //   method,
-      //   url,
-      //   body
-      // })
-      // )
       .then(display => 
-        this.setState({ display }));
-    // this.setState(display => JSON.stringify(display));
-    // fetchRequest(url, method, body)
-    // .then(state => (this.setState(JSON.stringify({ state })))
-    // );
+        this.setState({ display }))
   }
 
   render() {
