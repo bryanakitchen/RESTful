@@ -31,3 +31,21 @@ body, html {
   
 }
 
+<ArticleBox>
+{ (historyElements < 1) 
+  ? <p></p> 
+  : <HistoryHeader>History</HistoryHeader> 
+}
+
+{ (historyElements < 1) 
+  ? <p></p> 
+  :         <HistoryBody>
+    {historyElements}
+  </HistoryBody> 
+}
+
+{/* <HistoryBody>
+  {historyElements}
+</HistoryBody> */}
+
+</ArticleBox>

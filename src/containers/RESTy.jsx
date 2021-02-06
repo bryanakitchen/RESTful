@@ -12,10 +12,10 @@ grid-template-columns: 30% 1fr;
 grid-template-rows: auto;
 `;
 
-const ReqResDiv = styled.div`
+const ResDiv = styled.div`
   border: 3px solid purple;
-  display: flex;
-  flex-direction: column;
+  grid-column: 2;
+  grid-row 2;
   `;
 
 export default class RESTy extends Component {
@@ -54,20 +54,19 @@ export default class RESTy extends Component {
     return (
       <>
         <ContainerDiv>
-          {/* <HistoryDiv> */}
-            <History history={history} />
-          {/* </HistoryDiv> */}
+          <History history={history} />
 
-          <ReqResDiv>
-            <Request 
-              onChange={this.handleChange} 
-              onSubmit={this.handleSubmit}
-              url={url}
-              method={method} 
-              body={body}
-            />
+          <Request 
+            onChange={this.handleChange} 
+            onSubmit={this.handleSubmit}
+            url={url}
+            method={method} 
+            body={body}
+          />
+
+          <ResDiv>
             <Response display={display} />
-          </ReqResDiv>
+          </ResDiv>
 
         </ContainerDiv>
       </>

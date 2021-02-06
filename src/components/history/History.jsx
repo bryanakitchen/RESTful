@@ -4,18 +4,16 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const ArticleBox = styled.article`
-  border: 3px solid gold;
+  border: 5px solid orange;
 `;
 
 const HistoryHeader = styled.p`
-  border: 3px solid lightblue;
   text-align: center;
   font-size: 18px;
-  
+  margin: 3px;
 `;
 
 const HistoryBody = styled.span`
-  border: 3px solid blue;
   list-style-type: none;
   display: flex;
   flex-direction: column;
@@ -23,13 +21,15 @@ const HistoryBody = styled.span`
   `;
   
 const ListItem = styled.span`
-  border: 3px solid lightgreen;
   word-wrap: break-word;
   padding: .3rem;
   margin: 3px;
   `;
-  // margin: .5rem;
-  // font-size: 1.2rem;
+
+// const NoHistory = styled.p`
+//   margin: 0px;
+// `;
+
 
 const History = ({ history }) => {
   const historyElements = history.map((item, i) => {
@@ -42,12 +42,16 @@ const History = ({ history }) => {
 
   return (
     <>
-      <ArticleBox>
-        { (historyElements < 1) ? <p></p> : <HistoryHeader>History</HistoryHeader> }
-        <HistoryBody>
-          {historyElements}
-        </HistoryBody>
-      </ArticleBox>
+      { (historyElements < 1) 
+        ? ' '
+        : 
+        <ArticleBox>
+          <HistoryHeader>History</HistoryHeader>
+          <HistoryBody>
+            {historyElements}
+          </HistoryBody>        
+        </ArticleBox>
+      }
     </>
   );
 };
