@@ -6,14 +6,14 @@ import { fetchRequest } from '../services/fetchRequest';
 import styled from 'styled-components';
 
 const ContainerDiv = styled.div`
-  border: 3px solid blue;
   display: flex;
 `;
 
 const ResDiv = styled.div`
-  border: 3px solid aqua;
-  background: pink;
-  `;
+  border: 3px solid red;
+  border-radius: 5px;
+  padding: 3px;
+`;
 
 export default class RESTy extends Component {
   state = {

@@ -8,10 +8,13 @@ body {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    background: #001F54;
   }
   `;
   
 export default GlobalStyle;
+
+// #0A1128   #001F54   #034078    #1282A2   #FEFCFB
 
 // border: solid 10px yellow;
 // font-family: Open-Sans, Helvetica, Sans-Serif;

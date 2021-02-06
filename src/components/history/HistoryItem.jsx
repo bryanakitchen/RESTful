@@ -6,13 +6,14 @@ import styled from 'styled-components';
 const MethodName = styled.span`
   text-transform: uppercase;
   text-content: center;
-  `;
+`;
   
 const URLName = styled.p`
   margin: 0px;
   padding-top: 5px;
   padding-bottom: 5px;
-  `;
+`;
+  // word-wrap: break-word;
 
 const HistoryItem = ({ method, url, id }) => {
   return (
