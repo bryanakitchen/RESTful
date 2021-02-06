@@ -1,11 +1,24 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
+
+//eventually apply conditional colored text formatting for each method
+const MethodName = styled.span`
+  text-transform: uppercase;
+  text-content: center;
+  `;
+  
+const URLName = styled.p`
+  margin: 0px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  `;
 
 const HistoryItem = ({ method, url, id }) => {
   return (
     <article id={id}>
-      <h3 id={id}>{method}</h3>
-      <p id={id}>{url}</p>
+      <MethodName id={id}>{method}</MethodName>
+      <URLName id={id}>{url}</URLName>
     </article>
   );
 };

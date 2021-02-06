@@ -5,20 +5,31 @@ import styled from 'styled-components';
 
 const ArticleBox = styled.article`
   border: 3px solid gold;
-  background: gray;
 `;
 
-const HistoryHeader = styled.h2`
+const HistoryHeader = styled.p`
   border: 3px solid lightblue;
+  text-align: center;
+  font-size: 18px;
+  
 `;
 
-const HistoryBox = styled.ul`
+const HistoryBody = styled.span`
   border: 3px solid blue;
-`;
-
-const ListItem = styled.li`
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  `;
+  
+const ListItem = styled.span`
   border: 3px solid lightgreen;
-`;
+  word-wrap: break-word;
+  padding: .3rem;
+  margin: 3px;
+  `;
+  // margin: .5rem;
+  // font-size: 1.2rem;
 
 const History = ({ history }) => {
   const historyElements = history.map((item, i) => {
@@ -33,9 +44,9 @@ const History = ({ history }) => {
     <>
       <ArticleBox>
         { (historyElements < 1) ? <p></p> : <HistoryHeader>History</HistoryHeader> }
-        <HistoryBox>
+        <HistoryBody>
           {historyElements}
-        </HistoryBox>
+        </HistoryBody>
       </ArticleBox>
     </>
   );
