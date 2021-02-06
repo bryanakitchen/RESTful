@@ -1,24 +1,42 @@
 import React from 'react';
 import HistoryItem from './HistoryItem';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
+
+const ArticleBox = styled.article`
+  border: 3px solid gold;
+  background: gray;
+`;
+
+const HistoryHeader = styled.h2`
+  border: 3px solid lightblue;
+`;
+
+const HistoryBox = styled.ul`
+  border: 3px solid blue;
+`;
+
+const ListItem = styled.li`
+  border: 3px solid lightgreen;
+`;
 
 const History = ({ history }) => {
   const historyElements = history.map((item, i) => {
     return (
-      <li key={i}>
+      <ListItem key={i}>
         <HistoryItem method={item.method} url={item.url} id={i} />
-      </li>
+      </ListItem>
     );
   });
 
   return (
     <>
-      <article>
-        { (historyElements < 1) ? <p></p> : <h2>History</h2> }
-        <ul>
+      <ArticleBox>
+        { (historyElements < 1) ? <p></p> : <HistoryHeader>History</HistoryHeader> }
+        <HistoryBox>
           {historyElements}
-        </ul>
-      </article>
+        </HistoryBox>
+      </ArticleBox>
     </>
   );
 };

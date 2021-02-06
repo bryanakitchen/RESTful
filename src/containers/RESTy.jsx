@@ -3,6 +3,20 @@ import History from '../components/history/History';
 import Request from '../components/request/Request';
 import Response from '../components/response/Response';
 import { fetchRequest } from '../services/fetchRequest';
+import styled from 'styled-components';
+
+const ContainerDiv = styled.div`
+border: 3px solid red;
+display: grid;
+grid-template-columns: 30% 1fr;
+grid-template-rows: auto;
+`;
+
+const ReqResDiv = styled.div`
+  border: 3px solid purple;
+  display: flex;
+  flex-direction: column;
+  `;
 
 export default class RESTy extends Component {
   state = {
@@ -39,16 +53,23 @@ export default class RESTy extends Component {
     const { url, method, body, display, history } = this.state;
     return (
       <>
-        <History history={history} />
+        <ContainerDiv>
+          {/* <HistoryDiv> */}
+            <History history={history} />
+          {/* </HistoryDiv> */}
 
-        <Request 
-          onChange={this.handleChange} 
-          onSubmit={this.handleSubmit}
-          url={url}
-          method={method} 
-          body={body}
-        />
-        <Response display={display} />
+          <ReqResDiv>
+            <Request 
+              onChange={this.handleChange} 
+              onSubmit={this.handleSubmit}
+              url={url}
+              method={method} 
+              body={body}
+            />
+            <Response display={display} />
+          </ReqResDiv>
+
+        </ContainerDiv>
       </>
     );
   }
