@@ -4,7 +4,10 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const ArticleBox = styled.article`
-  border: 5px solid orange;
+  display: flex;
+  flex-direction: column;
+  max-width: 30%;
+  border: 3px solid purple;
 `;
 
 const HistoryHeader = styled.p`
@@ -14,22 +17,18 @@ const HistoryHeader = styled.p`
 `;
 
 const HistoryBody = styled.span`
-  list-style-type: none;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: flex-start;
-  `;
+  border: 1px solid blue;
+  list-style-type: none;
+`;
   
 const ListItem = styled.span`
   word-wrap: break-word;
   padding: .3rem;
   margin: 3px;
   `;
-
-// const NoHistory = styled.p`
-//   margin: 0px;
-// `;
-
 
 const History = ({ history }) => {
   const historyElements = history.map((item, i) => {

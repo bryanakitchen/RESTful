@@ -6,16 +6,13 @@ import { fetchRequest } from '../services/fetchRequest';
 import styled from 'styled-components';
 
 const ContainerDiv = styled.div`
-border: 3px solid red;
-display: grid;
-grid-template-columns: 30% 1fr;
-grid-template-rows: auto;
+  border: 3px solid blue;
+  display: flex;
 `;
 
 const ResDiv = styled.div`
-  border: 3px solid purple;
-  grid-column: 2;
-  grid-row 2;
+  border: 3px solid aqua;
+  background: pink;
   `;
 
 export default class RESTy extends Component {
@@ -56,15 +53,15 @@ export default class RESTy extends Component {
         <ContainerDiv>
           <History history={history} />
 
-          <Request 
-            onChange={this.handleChange} 
-            onSubmit={this.handleSubmit}
-            url={url}
-            method={method} 
-            body={body}
-          />
-
           <ResDiv>
+            <Request 
+              onChange={this.handleChange} 
+              onSubmit={this.handleSubmit}
+              url={url}
+              method={method} 
+              body={body}
+            />
+
             <Response display={display} />
           </ResDiv>
 
