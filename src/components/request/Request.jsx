@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-// border: solid 1px #F2F9FF;
 const TheForm = styled.form`
   padding: 5px;
   border-radius: 5px;
@@ -12,11 +11,12 @@ const TheForm = styled.form`
 const RadioDiv = styled.div`
   margin-bottom: 10px;
 `;
-// height
+
 const URLInput = styled.input`
-  background: #F2F9FF;
   border-radius: 3px;
   margin-bottom: 10px;
+  border: 1px solid gray;
+  padding: 3px;
 `;
 
 const Labels = styled.label`
@@ -26,7 +26,7 @@ color: #001F54;
   margin: 4px;
   padding: 3px;
 `;
-  // figure out selecting input
+
 const Radio = styled.input`
   display: none;
 
@@ -38,10 +38,6 @@ const Radio = styled.input`
     border-radius: 3px;
   }
 `;
-
-// height: 0;
-// width: 0;
-// margin-left: 0;
 
 const Request = ({ onChange, onSubmit, url, method, body }) => {
   return (
