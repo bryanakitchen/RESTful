@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 
-//Need to add fonts
 const Banner = styled.p`
   text-align: center;
   color: #FEFCFB;
