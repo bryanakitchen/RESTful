@@ -9,7 +9,7 @@ const HistoryDiv = styled.div`
   max-width: 30%;
   background: #0A1128;
   border-radius: 5px;
-  margin-left: 10px;
+  margin: 0px 5px 0px 10px;
 `;
 
 const HistoryHeader = styled.p`

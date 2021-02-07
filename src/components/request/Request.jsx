@@ -20,11 +20,8 @@ const Labels = styled.label`
   
   `;
   // figure out selecting input
-  const Radio = styled.input`
+const Radio = styled.input`
   display: none;
-  height: 0;
-  width: 0;
-  margin-left: 0;
 
   &:checked + ${Labels} {
     background: yellow;
@@ -50,39 +47,39 @@ const Request = ({ onChange, onSubmit, url, method, body }) => {
 
         <div>
           <Radio 
-            id="check1"
+            id="get"
             type="radio" 
             name="method" 
             value="get" 
             checked={method === 'get'}
             onChange={onChange} />
-          <Labels for="check1" htmlFor="get">GET</Labels>
+          <Labels htmlFor="get">GET</Labels>
 
           <Radio 
-            id="check2"
+            id="post"
             type="radio" 
             name="method" 
             value="post"
             checked={method === 'post'}
             onChange={onChange} />
-          <Labels for="check2" htmlFor="post">POST</Labels>
+          <Labels htmlFor="post">POST</Labels>
 
           <Radio 
-            id="check3"
+            id="put"
             type="radio" 
             name="method" 
             value="put"
             onChange={onChange} />
-          <Labels for="check3" htmlFor="put">PUT</Labels>
+          <Labels htmlFor="put">PUT</Labels>
 
           <Radio 
-            id="check4"
+            id="delete"
             type="radio" 
             name="method" 
             value="delete"
             checked={method === 'delete'}
             onChange={onChange} />
-          <Labels for="check4" htmlFor="delete">DELETE</Labels>
+          <Labels htmlFor="delete">DELETE</Labels>
 
           <button>Send</button>
         </div>
