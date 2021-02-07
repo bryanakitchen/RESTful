@@ -2,44 +2,58 @@
 
 exports[`History component renders History 1`] = `
 <DocumentFragment>
-  <article>
-    <h2>
+  <div
+    class="sc-dlfnbm jtPkuU"
+  >
+    <p
+      class="sc-hKgILt kJfJMY"
+    >
       History
-    </h2>
-    <ul>
-      <li>
+    </p>
+    <span
+      class="sc-eCssSg gsNVDE"
+    >
+      <span
+        class="sc-jSgupP lkBpNL"
+      >
         <article
           id="0"
         >
-          <h3
+          <span
+            class="sc-bdfBwQ gdFaFC"
             id="0"
           >
             get
-          </h3>
+          </span>
           <p
+            class="sc-gsTCUz khlkDi"
             id="0"
           >
             google.com
           </p>
         </article>
-      </li>
-      <li>
+      </span>
+      <span
+        class="sc-jSgupP lkBpNL"
+      >
         <article
           id="1"
         >
-          <h3
+          <span
+            class="sc-bdfBwQ gdFaFC"
             id="1"
           >
             put
-          </h3>
+          </span>
           <p
+            class="sc-gsTCUz khlkDi"
             id="1"
           >
             google1.com
           </p>
         </article>
-      </li>
-    </ul>
-  </article>
+      </span>
+    </span>
+  </div>
 </DocumentFragment>
 `;
