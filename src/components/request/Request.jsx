@@ -17,6 +17,7 @@ const URLInput = styled.input`
   margin-bottom: 10px;
   border: 1px solid gray;
   padding: 3px;
+  width: 193px;
 `;
 
 const Labels = styled.label`
@@ -37,6 +38,10 @@ const Radio = styled.input`
     border: 2px solid #101C41;
     border-radius: 3px;
   }
+`;
+
+const SubmitButton = styled.button`
+  margin-left: 5px;
 `;
 
 const Request = ({ onChange, onSubmit, url, method, body }) => {
@@ -87,7 +92,7 @@ const Request = ({ onChange, onSubmit, url, method, body }) => {
             onChange={onChange} />
           <Labels htmlFor="delete">DELETE</Labels>
 
-          <button>Send</button>
+          <SubmitButton>Send</SubmitButton>
         </RadioDiv>
 
         <textarea 
