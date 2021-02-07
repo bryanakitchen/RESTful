@@ -7,12 +7,15 @@ const HistoryDiv = styled.div`
   display: flex;
   flex-direction: column;
   max-width: 30%;
+  background: #0A1128;
+  border-radius: 5px;
+  margin-left: 10px;
 `;
 
 const HistoryHeader = styled.p`
   text-align: center;
-  font-size: 18px;
-  margin: 3px 3px 6px 3px;
+  font-size: 20px;
+  margin: 6px 3px;
   color: #DEE4F7;
 `;
 
@@ -21,17 +24,18 @@ const HistoryBody = styled.span`
   flex-direction: column;
   justify-content: flex-start;
   color: #1282A2;
-  margin: 10px;
+  margin: 5px;
   `;
-  // background: #0A1128;
   
-  const ListItem = styled.span`
+const ListItem = styled.span`
   word-wrap: break-word;
   padding: .3rem;
   margin: 3px;
   max-width: 90%;
   border: 1px solid #034078;
   border-radius: 8px;
+  background: #001F54;
+
 `;
 
 const History = ({ history }) => {
