@@ -6,7 +6,7 @@ exports[`Request component renders Request 1`] = `
     class="sc-bdfBwQ jYpsHt"
   >
     <input
-      class="sc-dlfnbm jFSOMR"
+      class="sc-dlfnbm cDXkJb"
       name="url"
       placeholder="Enter request URL"
       type="text"
@@ -68,7 +68,9 @@ exports[`Request component renders Request 1`] = `
       >
         DELETE
       </label>
-      <button>
+      <button
+        class="sc-jSgupP jdrOer"
+      >
         Send
       </button>
     </div>
