@@ -14,15 +14,21 @@ const URLInput = styled.input`
 `;
 
 const Labels = styled.label`
-color: pink;
-margin: 3px;
-
-`;
-
-const Radio = styled.input`
+  background: pink;
+  cursor: pointer;
+  margin: 3px;
+  
+  `;
+  // figure out selecting input
+  const Radio = styled.input`
   display: none;
-  $:checked + ${Labels} {
+  height: 0;
+  width: 0;
+  margin-left: 0;
+
+  &:checked + ${Labels} {
     background: yellow;
+    align-items: center;
   }
 `;
 
@@ -44,40 +50,39 @@ const Request = ({ onChange, onSubmit, url, method, body }) => {
 
         <div>
           <Radio 
-            id="get"
+            id="check1"
             type="radio" 
             name="method" 
             value="get" 
             checked={method === 'get'}
             onChange={onChange} />
-          <Labels htmlFor="get">GET</Labels>
+          <Labels for="check1" htmlFor="get">GET</Labels>
 
           <Radio 
-            id="post"
+            id="check2"
             type="radio" 
             name="method" 
             value="post"
             checked={method === 'post'}
             onChange={onChange} />
-          <Labels htmlFor="post">POST</Labels>
+          <Labels for="check2" htmlFor="post">POST</Labels>
 
           <Radio 
-            id="put"
+            id="check3"
             type="radio" 
             name="method" 
             value="put"
-            checked={method === 'put'}
             onChange={onChange} />
-          <Labels htmlFor="put">PUT</Labels>
+          <Labels for="check3" htmlFor="put">PUT</Labels>
 
           <Radio 
-            id="delete"
+            id="check4"
             type="radio" 
             name="method" 
             value="delete"
             checked={method === 'delete'}
             onChange={onChange} />
-          <Labels htmlFor="delete">DELETE</Labels>
+          <Labels for="check4" htmlFor="delete">DELETE</Labels>
 
           <button>Send</button>
         </div>
