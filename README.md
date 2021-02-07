@@ -1,6 +1,6 @@
 # RESTful
 
-RESTful is a browser-based API client that allows users to make RESTful calls to an API. A user's calls are kept in localStorage and displayed for easy reference. 
+RESTful is a browser-based API client that allows users to make RESTful calls to an API. A users calls are kept in localStorage and displayed for easy reference. 
 
 RESTful was created using React and styled with styled-components.
 
