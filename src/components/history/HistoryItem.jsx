@@ -6,12 +6,14 @@ import styled from 'styled-components';
 const MethodName = styled.span`
   text-transform: uppercase;
   text-content: center;
+  font-weight: 500;
 `;
   
 const URLName = styled.p`
   margin: 0px;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  font-size: 14px;
 `;
   // word-wrap: break-word;
 

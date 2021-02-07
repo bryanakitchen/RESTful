@@ -17,6 +17,7 @@ const HistoryHeader = styled.p`
   font-size: 20px;
   margin: 6px 3px;
   color: #E9ECEF;
+  font-weight: 500;
 `;
 
 const HistoryBody = styled.span`
