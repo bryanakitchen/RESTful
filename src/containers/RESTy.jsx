@@ -3,6 +3,17 @@ import History from '../components/history/History';
 import Request from '../components/request/Request';
 import Response from '../components/response/Response';
 import { fetchRequest } from '../services/fetchRequest';
+import styled from 'styled-components';
+
+const ContainerDiv = styled.div`
+  display: flex;
+  justify-content: center;
+`;
+
+const ResDiv = styled.div`
+  border-radius: 5px;
+  padding: 3px;
+`;
 
 export default class RESTy extends Component {
   state = {
@@ -39,16 +50,22 @@ export default class RESTy extends Component {
     const { url, method, body, display, history } = this.state;
     return (
       <>
-        <History history={history} />
+        <ContainerDiv>
+          <History history={history} />
 
-        <Request 
-          onChange={this.handleChange} 
-          onSubmit={this.handleSubmit}
-          url={url}
-          method={method} 
-          body={body}
-        />
-        <Response display={display} />
+          <ResDiv>
+            <Request 
+              onChange={this.handleChange} 
+              onSubmit={this.handleSubmit}
+              url={url}
+              method={method} 
+              body={body}
+            />
+
+            <Response display={display} />
+          </ResDiv>
+
+        </ContainerDiv>
       </>
     );
   }

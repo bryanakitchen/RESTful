@@ -5,12 +5,14 @@ exports[`HistoryItem component renders HistoryItem 1`] = `
   <article
     id="1"
   >
-    <h3
+    <span
+      class="sc-bdfBwQ gdFaFC"
       id="1"
     >
       GET
-    </h3>
+    </span>
     <p
+      class="sc-gsTCUz khlkDi"
       id="1"
     >
       www.google.com

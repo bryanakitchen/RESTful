@@ -1,53 +1,94 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
+
+const TheForm = styled.form`
+  padding: 5px;
+  border-radius: 5px;
+  background: #E9ECEF;
+`;
+
+const RadioDiv = styled.div`
+  margin-bottom: 10px;
+`;
+
+const URLInput = styled.input`
+  border-radius: 3px;
+  margin-bottom: 10px;
+  border: 1px solid gray;
+  padding: 3px;
+`;
+
+const Labels = styled.label`
+background: #e9ecef;
+color: #001F54;
+  cursor: pointer;
+  margin: 4px;
+  padding: 3px;
+`;
+
+const Radio = styled.input`
+  display: none;
+
+  &:checked + ${Labels} {
+    background: #034078;
+    color: #E9ECEF;
+    align-items: center;
+    border: 2px solid #101C41;
+    border-radius: 3px;
+  }
+`;
 
 const Request = ({ onChange, onSubmit, url, method, body }) => {
   return (
     <>
-      <form onSubmit={onSubmit} >
+      <TheForm onSubmit={onSubmit} >
 
-        <input 
+        <URLInput 
           type="text" 
           placeholder="Enter request URL" 
           name="url" 
           value={url}
           onChange={onChange} />
 
-        <div>
-          <input 
+        <RadioDiv>
+          <Radio 
+            id="get"
             type="radio" 
             name="method" 
             value="get" 
             checked={method === 'get'}
             onChange={onChange} />
-          <label htmlFor="get">GET</label>
+          <Labels htmlFor="get">GET</Labels>
 
-          <input 
+          <Radio 
+            id="post"
             type="radio" 
             name="method" 
             value="post"
             checked={method === 'post'}
             onChange={onChange} />
-          <label htmlFor="post">POST</label>
+          <Labels htmlFor="post">POST</Labels>
 
-          <input 
+          <Radio 
+            id="put"
             type="radio" 
             name="method" 
             value="put"
-            checked={method === 'put'}
             onChange={onChange} />
-          <label htmlFor="put">PUT</label>
+          <Labels htmlFor="put">PUT</Labels>
 
-          <input 
+          <Radio 
+            id="delete"
             type="radio" 
             name="method" 
             value="delete"
             checked={method === 'delete'}
             onChange={onChange} />
-          <label htmlFor="delete">DELETE</label>
+          <Labels htmlFor="delete">DELETE</Labels>
 
           <button>Send</button>
-        </div>
+        </RadioDiv>
 
         <textarea 
           placeholder="Raw JSON Body" 
@@ -56,7 +97,7 @@ const Request = ({ onChange, onSubmit, url, method, body }) => {
           name="body" 
           value={body}
           onChange={onChange} ></textarea>
-      </form>
+      </TheForm>
     </>
   );
 };

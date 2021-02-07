@@ -2,51 +2,68 @@
 
 exports[`Request component renders Request 1`] = `
 <DocumentFragment>
-  <form>
+  <form
+    class="sc-bdfBwQ jYpsHt"
+  >
     <input
+      class="sc-dlfnbm jFSOMR"
       name="url"
       placeholder="Enter request URL"
       type="text"
       value="www.google.com"
     />
-    <div>
+    <div
+      class="sc-gsTCUz lmUvfY"
+    >
       <input
         checked=""
+        class="sc-eCssSg kLfvAK"
+        id="get"
         name="method"
         type="radio"
         value="get"
       />
       <label
+        class="sc-hKgILt cUBBMN"
         for="get"
       >
         GET
       </label>
       <input
+        class="sc-eCssSg kLfvAK"
+        id="post"
         name="method"
         type="radio"
         value="post"
       />
       <label
+        class="sc-hKgILt cUBBMN"
         for="post"
       >
         POST
       </label>
       <input
+        class="sc-eCssSg kLfvAK"
+        id="put"
         name="method"
         type="radio"
         value="put"
       />
       <label
+        class="sc-hKgILt cUBBMN"
         for="put"
       >
         PUT
       </label>
       <input
+        class="sc-eCssSg kLfvAK"
+        id="delete"
         name="method"
         type="radio"
         value="delete"
       />
       <label
+        class="sc-hKgILt cUBBMN"
         for="delete"
       >
         DELETE

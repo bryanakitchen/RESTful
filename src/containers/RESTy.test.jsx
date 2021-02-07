@@ -15,11 +15,10 @@ describe('RESTy container', () => {
         value: 'https://jsonplaceholder.typicode.com/posts/1'
       }
     });
-      
 
     return waitFor(() => {
       expect(screen.getByTestId('display'))
-      .not.toBeEmptyDOMElement();
+        .not.toBeEmptyDOMElement();
     });
   }
   );
