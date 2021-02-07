@@ -24,7 +24,7 @@ exports[`Request component renders Request 1`] = `
         value="get"
       />
       <label
-        class="sc-hKgILt cUBBMN"
+        class="sc-hKgILt dlnjmp"
         for="get"
       >
         GET
@@ -37,7 +37,7 @@ exports[`Request component renders Request 1`] = `
         value="post"
       />
       <label
-        class="sc-hKgILt cUBBMN"
+        class="sc-hKgILt dlnjmp"
         for="post"
       >
         POST
@@ -50,7 +50,7 @@ exports[`Request component renders Request 1`] = `
         value="put"
       />
       <label
-        class="sc-hKgILt cUBBMN"
+        class="sc-hKgILt dlnjmp"
         for="put"
       >
         PUT
@@ -63,7 +63,7 @@ exports[`Request component renders Request 1`] = `
         value="delete"
       />
       <label
-        class="sc-hKgILt cUBBMN"
+        class="sc-hKgILt dlnjmp"
         for="delete"
       >
         DELETE
