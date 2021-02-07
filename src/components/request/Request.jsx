@@ -21,8 +21,8 @@ const URLInput = styled.input`
 `;
 
 const Labels = styled.label`
-background: #e9ecef;
-color: #001F54;
+  background: #e9ecef;
+  color: #001F54;
   cursor: pointer;
   margin: 4px;
   padding: 3px;

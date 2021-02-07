@@ -3,7 +3,7 @@
 exports[`History component renders History 1`] = `
 <DocumentFragment>
   <div
-    class="sc-dlfnbm jtPkuU"
+    class="sc-dlfnbm htbDCf"
   >
     <p
       class="sc-hKgILt kJfJMY"
@@ -11,10 +11,10 @@ exports[`History component renders History 1`] = `
       History
     </p>
     <span
-      class="sc-eCssSg gsNVDE"
+      class="sc-eCssSg hUWzSP"
     >
       <span
-        class="sc-jSgupP lkBpNL"
+        class="sc-jSgupP ffeFYP"
       >
         <article
           id="0"
@@ -34,7 +34,7 @@ exports[`History component renders History 1`] = `
         </article>
       </span>
       <span
-        class="sc-jSgupP lkBpNL"
+        class="sc-jSgupP ffeFYP"
       >
         <article
           id="1"

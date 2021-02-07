@@ -8,8 +8,9 @@ const ResDiv = styled.div`
   padding: 5px;
   border-radius: 5px;
   margin-top: 10px;
+  overflow-y: auto;
+  max-height: 50vh;
 `;
-
 
 const Response = ({ display }) => {
   return (

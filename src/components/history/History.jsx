@@ -10,7 +10,8 @@ const HistoryDiv = styled.div`
   background: #0A1128;
   border-radius: 5px;
   margin: 0px 5px 0px 10px;
-`;
+  max-height: 80vh;
+  `;
 
 const HistoryHeader = styled.p`
   text-align: center;
@@ -26,6 +27,9 @@ const HistoryBody = styled.span`
   justify-content: flex-start;
   color: #001F54;
   margin: 5px;
+  overflow: hidden;
+  overflow-y: auto;
+
   `;
   
 const ListItem = styled.span`
@@ -36,8 +40,6 @@ const ListItem = styled.span`
   border: 1px solid #034078;
   border-radius: 8px;
   background: #E9ECEF;
-
-
 `;
 
 const History = ({ history }) => {

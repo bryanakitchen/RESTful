@@ -15,7 +15,6 @@ const URLName = styled.p`
   padding-bottom: 3px;
   font-size: 14px;
 `;
-  // word-wrap: break-word;
 
 const HistoryItem = ({ method, url, id }) => {
   return (
