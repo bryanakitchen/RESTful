@@ -6,7 +6,7 @@ import styled from 'styled-components';
 const TheForm = styled.form`
   padding: 5px;
   border-radius: 5px;
-  background: #e9ecef;
+  background: #E9ECEF;
 `;
 
 const RadioDiv = styled.div`

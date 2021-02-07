@@ -16,14 +16,14 @@ const HistoryHeader = styled.p`
   text-align: center;
   font-size: 20px;
   margin: 6px 3px;
-  color: #DEE4F7;
+  color: #E9ECEF;
 `;
 
 const HistoryBody = styled.span`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  color: #1282A2;
+  color: #001F54;
   margin: 5px;
   `;
   
@@ -34,7 +34,8 @@ const ListItem = styled.span`
   max-width: 90%;
   border: 1px solid #034078;
   border-radius: 8px;
-  background: #001F54;
+  background: #E9ECEF;
+
 
 `;
 

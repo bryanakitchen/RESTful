@@ -4,9 +4,10 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const ResDiv = styled.div`
-  background-color: #F2F9FF;
+  background: #E9ECEF;
   padding: 5px;
   border-radius: 5px;
+  margin-top: 10px;
 `;
 
 
