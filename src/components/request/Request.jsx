@@ -1,12 +1,41 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
+
+// border: solid 1px #F2F9FF;
+const TheForm = styled.form`
+  padding: 5px;
+  border-radius: 5px;
+`;
+
+const URLInput = styled.input`
+  background: #F2F9FF;
+  border-radius: 3px;
+`;
+
+const Labels = styled.label`
+color: pink;
+margin: 3px;
+
+`;
+
+const Radio = styled.input`
+  display: none;
+  $:checked + ${Labels} {
+    background: yellow;
+  }
+`;
+
+// height: 0;
+// width: 0;
+// margin-left: 0;
 
 const Request = ({ onChange, onSubmit, url, method, body }) => {
   return (
     <>
-      <form onSubmit={onSubmit} >
+      <TheForm onSubmit={onSubmit} >
 
-        <input 
+        <URLInput 
           type="text" 
           placeholder="Enter request URL" 
           name="url" 
@@ -14,37 +43,41 @@ const Request = ({ onChange, onSubmit, url, method, body }) => {
           onChange={onChange} />
 
         <div>
-          <input 
+          <Radio 
+            id="get"
             type="radio" 
             name="method" 
             value="get" 
             checked={method === 'get'}
             onChange={onChange} />
-          <label htmlFor="get">GET</label>
+          <Labels htmlFor="get">GET</Labels>
 
-          <input 
+          <Radio 
+            id="post"
             type="radio" 
             name="method" 
             value="post"
             checked={method === 'post'}
             onChange={onChange} />
-          <label htmlFor="post">POST</label>
+          <Labels htmlFor="post">POST</Labels>
 
-          <input 
+          <Radio 
+            id="put"
             type="radio" 
             name="method" 
             value="put"
             checked={method === 'put'}
             onChange={onChange} />
-          <label htmlFor="put">PUT</label>
+          <Labels htmlFor="put">PUT</Labels>
 
-          <input 
+          <Radio 
+            id="delete"
             type="radio" 
             name="method" 
             value="delete"
             checked={method === 'delete'}
             onChange={onChange} />
-          <label htmlFor="delete">DELETE</label>
+          <Labels htmlFor="delete">DELETE</Labels>
 
           <button>Send</button>
         </div>
@@ -56,7 +89,7 @@ const Request = ({ onChange, onSubmit, url, method, body }) => {
           name="body" 
           value={body}
           onChange={onChange} ></textarea>
-      </form>
+      </TheForm>
     </>
   );
 };

@@ -12,25 +12,26 @@ const HistoryDiv = styled.div`
 const HistoryHeader = styled.p`
   text-align: center;
   font-size: 18px;
-  margin: 3px;
+  margin: 3px 3px 6px 3px;
   color: #DEE4F7;
 `;
-// 1282A2  FEFCFB  EBF5FE
+
 const HistoryBody = styled.span`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: flex-start;
-  border: 1px solid #034078;
-  border-radius: 8px;
-  background: #0A1128;
   color: #1282A2;
-`;
+  margin: 10px;
+  `;
+  // background: #0A1128;
   
-const ListItem = styled.span`
+  const ListItem = styled.span`
   word-wrap: break-word;
   padding: .3rem;
   margin: 3px;
   max-width: 90%;
+  border: 1px solid #034078;
+  border-radius: 8px;
 `;
 
 const History = ({ history }) => {

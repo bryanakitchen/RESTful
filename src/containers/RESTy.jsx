@@ -10,7 +10,6 @@ const ContainerDiv = styled.div`
 `;
 
 const ResDiv = styled.div`
-  border: 3px solid red;
   border-radius: 5px;
   padding: 3px;
 `;
